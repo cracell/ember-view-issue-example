@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Watch</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/watch.css">
+  </head>
+  <body>
+    <script>
+      window.WatchENV = {{ENV}};
+      window.EmberENV = window.WatchENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/watch.js"></script>
+    <script>
+      window.Watch = require('watch/app')['default'].create(WatchENV.APP);
+    </script>
+  </body>
+</html>
